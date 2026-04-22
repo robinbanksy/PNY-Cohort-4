@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>April 22</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (April 24)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>What is Git?</h2>
+                <p>Git is a kind of software known as a version control system. Essentially, it allows us to keep track of changes that we make to our projects. This is useful, because it lets us revert to previous versions if needed, and also makes it easier to collaborate with developers.</p>
+                <p>To use git, we create a <strong>Git repository</strong>, a folder in which we will store any project files. Git functions within the repository folder, providing its version control features.</p>
+            </section>
+            <section class="content">
+                <h2>What is GitHub?</h2>
+                <p>Github is an online host for Git Repositories. Instead of storing our code locally, we can have our Git repositories hosted on Github, so that they are accessible from anywhere.</p>
+                <p>The copy of our code stored on GitHub is called a "remote" repository. The copy on our device is called a "local" repository. We use Git commands to sync changes between the two. The usual workflow is the following:</p>
+                <ol>
+                    <li>Pull changes from the remote repository on GitHub to our local repository.</li>
+                    <li>Make changes to our code in the local repository.</li>
+                    <li>Use Git commands to push those changes back to the remote repository on GitHub.</li>
+                </ol>
+            </section>
+            <section class="content">
+                <h2>Github Codespaces</h2>
+                <p>In the previous class, we were introduced to the code editor VS Code. Github Codespaces allows us to use a version of VS Code directly in our browser, without having to install it locally.</p>
+                <p>Codespaces are created on a particular branch of a repository, and stand in as our local repository.</p>
+            </section>
+            <section class="content">
+                <h2>HTML Attributes</h2>
+                <p>HTML attributes provide additional information about an element. They are specified inside of the opening tag of an element and consist of a <strong>name</strong> and a <strong>value</strong>. We've already seen some examples of HTML attributes in action, such as the "href" attribute in the anchor tag.</p>
+                <p>Here are some examples of attributes:</p>
+                <pre class="code-block">&lt;h2 <span class="code-highlight">id="section-one-heading"</span>&gt;Section Title&lt;/h2&gt;
+&lt;a <span class="code-highlight">href="https://example.com"</span> <span class="code-highlight">target="_blank"</span>&gt;Link&lt;/a&gt;</pre>
+            </section>
+            <section class="content">
+                <h2>HTML IDs</h2>
+                <p>As seen above, an <strong>id</strong> is a kind of HTML attribute. We use ids to uniquely identify elements, thus allowing them to be targeted with CSS or JavaScript. Two elements on the same page cannot have the same id.</p>
+            </section>
+            <section class="content">
+                <h2>The Anchor Tag</h2>
+                <p>The anchor tag (<code>&lt;a&gt;</code>) is used to create hyperlinks in HTML. It allows users to navigate to other pages or sections within the same page.</p>
+                <p>In the previous class, we briefly saw that the anchor tag can link to external websites. Another use for them is to link to other pages on our own site. We accomplish this by pointing the href attribute to another HTML file in our site's folder:</p>
+                <pre class="code-block">&lt;a <span class="code-highlight">href="about.html"</span>&gt;About Us&lt;/a&gt;</pre>
+                <p>We can also use anchors to link to specific sections within the same page, done by instead pointing the href to an id on the same page:</p>
+                <pre class="code-block">&lt;a <span class="code-highlight">href="#section-one"</span>&gt;Go to Section One&lt;/a&gt;</pre>
+            </section>
+            <section class="content">
+                <h2>The Image Tag</h2>
+                <p>We no doubt want to include images in our web pages. The image tag (<code>&lt;img&gt;</code>) is used to display images in HTML. Notice that it is an empty tag, meaning it does not have a closing tag.</p>
+                <p>To use the image tag, we need to specify the source of the image using the "src" attribute. This can be a URL to an image hosted online, or a path to an image file in our project folder:</p>
+                <pre class="code-block">&lt;img <span class="code-highlight">src="https://example.com/image.jpg"</span> <span class="code-highlight">alt="Description of image"</span>&gt;</pre>
+                <p>It is also important to include the "alt" attribute, which provides a text description of the image for accessibility purposes. This description will be read by screen readers for visually impaired users, and will also be displayed if the image fails to load.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4">Github Repository</a>
+        </footer>
+    </div>
+
+</body>
+</html>
