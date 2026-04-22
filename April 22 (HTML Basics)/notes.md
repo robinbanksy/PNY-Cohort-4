@@ -59,7 +59,7 @@
 - Use the `src` attribute to specify the image source.
 - Use the `alt` attribute to provide a text description for accessibility.
 
-# Example image tag:
+## Example image tag:
 - `<img src="https://example.com/image.jpg" alt="Description of image">`
 
 - The `alt` description is read by screen readers and shown if the image fails to load.
