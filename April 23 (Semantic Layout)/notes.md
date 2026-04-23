@@ -18,6 +18,6 @@ All of these tags are essentially empty boxes; they don't do anything visually o
 
 Below is an example of a webpage layout sketch:
 
-![Layout Example](/layout-example.png "Webpage example layout")
+![Layout Example](./layout-example.png "Webpage example layout")
 
 How can we implement this layout using semantic HTML elements?
