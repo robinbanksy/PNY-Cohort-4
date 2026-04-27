@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>April 27</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (April 27)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>HTML Review</h2>
+                <p>This is a review of the key concepts covered in the previous classes.</p>
+                <p>HTML stands for <strong>HyperText Markup Language</strong>. It is the standard markup language for creating web pages. We use HTML to define the <strong>structure</strong> and <strong>content</strong> of web pages.</p>
+                <h3>Basic HTML Structure</h3>
+                <p>An HTML file is made of <strong>elements</strong>, defined by <strong>tags</strong>, which are the building blocks of a webpage. Tags take the following form:</p>
+                <code class="code-block">&lt;tag&gt;Content&lt;/tag&gt;</code>
+                <p>For example, the <code>&lt;h1&gt;</code> tag is used to define a heading, and the <code>&lt;p&gt;</code> tag is used to define a paragraph.</p>
+                <pre class="code-block">&lt;h1&gt;Heading Content&lt;/h1&gt;
+
+&lt;p&gt;Paragraph Content&lt;/p&gt;</pre>
+                <p>The basic structure of an HTML document includes a <code>&lt;head&gt;</code> section and a <code>&lt;body&gt;</code> section, both inside of a root <code>&lt;html&gt;</code> tag.</p>
+                <pre class="code-block">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Document Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Page Content goes here
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+                <h3>HTML Semantic Elements</h3>
+                <p>Often we use semantic layout elements to create a more structured and accessible webpage:</p>
+                <pre class="code-block">&lt;body&gt;
+    &lt;header&gt;
+        Header content goes here
+    &lt;/header&gt;
+    &lt;nav&gt;
+        Navigation content goes here
+    &lt;/nav&gt;
+    &lt;main&gt;
+        Main content goes here
+    &lt;/main&gt;
+    &lt;aside&gt;
+        Sidebar content goes here
+    &lt;/aside&gt;
+    &lt;footer&gt;
+        Footer content goes here
+    &lt;/footer&gt;
+&lt;/body&gt;
+</pre>       
+                <h3>HTML Attributes</h3>
+                <p>Another common HTML pattern is the use of attributes to provide additional information about elements:</p>
+                <pre class="code-block">&lt;tag <span class="code-highlight">attribute="value"</span>&gt;Content&lt;/tag&gt;</pre>
+                <p>For example, the <code>href</code> attribute is used in anchor tags to specify the URL of the page the link goes to:</p>
+                <pre class="code-block">&lt;a <span class="code-highlight">href="https://www.example.com"</span>&gt;Click here&lt;/a&gt;</pre>
+                <p>Or the <code>id</code> attribute is used to uniquely identify an element:</p>
+                <pre class="code-block">&lt;p <span class="code-highlight">id="my-element"</span>&gt;Content&lt;/p&gt;</pre>
+            </section>
+            <section class="content">
+                <h2>CSS Introduction</h2>
+                <p>CSS stands for <strong>Cascading Style Sheets</strong>. It is a stylesheet language used to describe the presentation of a document written in HTML. CSS allows us to control the layout, colors, fonts, and overall appearance of our web pages.</p>
+                <p>CSS can be applied to HTML elements in three ways:</p>
+                <ul>
+                    <li><strong>Inline CSS:</strong> Applied directly to an HTML element using the <code>style</code> attribute.</li>
+                    <li><strong>Internal CSS:</strong> Defined within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of the HTML document.</li>
+                    <li><strong>External CSS:</strong> Linked to an external stylesheet file using the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> section.</li>
+                </ul>
+                <p>Generally speaking, using an external stylesheet is the most efficient and maintainable approach for styling web pages. Inline CSS and Internal style tags are fine for small projects or quick prototypes, but they quickly become difficult to manage as the project grows.</p>
+                <h3>Basic CSS Syntax</h3>
+                <p>The syntax for CSS rules consists of a selector and a declaration block:</p>
+                <pre class="code-block">selector {
+    property: value;
+}</pre>
+                <p>For example, to change the color of all paragraphs to blue, we can use the following CSS rule:</p>
+                <pre class="code-block">p {
+    color: blue;
+}</pre>
+                <h3>More Specific Selectors</h3>
+                <p>We may not want every element of a certain type to have the same style. We can use more specific selectors to target individual elements. For example, we can use IDs:</p>
+                <pre class="code-block">&lt;h2 <span class="code-highlight">id="my-id"</span>&gt;Content&lt;/h2&gt;</pre>
+                <pre class="code-block">#my-id {
+    font-size: 16px;
+}</pre>
+                <p>In this example, the rule will only apply to the element with the ID "my-id". This way, we can apply unique styles to specific elements on our page. However, it is generally better not to use IDs for styling purposes. Instead, we use <strong>classes</strong>.</p>
+                <p>Classes are similar to IDs but can be applied to multiple elements:</p>
+                <pre class="code-block">&lt;button <span class="code-highlight">class="my-class"</span>&gt;Content&lt;/button&gt;</pre>
+                <pre class="code-block">.my-class {
+    background-color: blue;
+    color: white;
+}</pre>
+                <p>In this example, the rule will apply to all elements with the class "my-class". This allows us to reuse styles across multiple elements, making our CSS more efficient and easier to maintain.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4">Github Repository</a>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
