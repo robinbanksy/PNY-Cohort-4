@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>April 29</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (April 29)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>Complex CSS Selectors</h2>
+                <p>As covered in the previous lesson, CSS rules take the following form:</p>
+                <pre class="code-block">selector {
+    property: value;
+}</pre>
+                <p>The "selector" part of a CSS rule is what tells the browser which HTML elements to apply the rule to. We've seen that we can use element type selectors, and also class selectors and id selectors to target specific elements. Today we'll see examples of more complex selectors, which are often composed of multiple simple selectors.</p>
+                <h3>Multi-Class Selectors</h3>
+                <pre class="code-block">&lt;div class="box red"&gt;Red Box&lt;/div&gt;
+&lt;div class="box blue"&gt;Blue Box&lt;/div&gt;
+&lt;div class="box green"&gt;Green Box&lt;/div&gt;
+</pre>
+                <pre class="code-block"><span class="code-highlight">.box.red</span> {
+    background-color: red;
+}</pre>
+                <p>Remember that a single element can have multiple classes applied to it. Above we can see a CSS rule that targets elements only if they have both the classes "box" and "red".</p>
+                <h3>Descendant Selectors</h3>
+                <pre class="code-block">&lt;div class="container"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;Item 4&lt;/div&gt;
+&lt;div class="item"&gt;Item 5&lt;/div&gt;
+</pre>
+
+                </pre>
+                <pre class="code-block"><span class="code-highlight">.container .item</span> {
+    color: red;
+}</pre>
+                <p>This rule will apply to any element with the class "item" that is a descendant of an element with the class "container". In other words, it will apply to any element that has the class "item" and is inside an element with the class "container". Notice that this rule will not apply to the "item" elements outside of the "container" element.</p>
+                <h3>Child Selectors</h3>
+                <pre class="code-block">&lt;div class="container"&gt;
+    &lt;div class="item"&gt;
+        &lt;div class="item"&gt;Item 4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+                </pre>
+                <pre class="code-block"><span class="code-highlight">.container &gt; .item</span> {
+    font-size: 20px;
+}</pre>
+                <p>This rule is similar to the descendant selector, but it only applies to elements that are direct children of the "container" element. In other words, it will apply to any element with the class "item" that is a direct child of an element with the class "container". Notice that this rule will not apply to the "item" elements that are nested inside other elements within the "container" element.</p>
+                <h3>Other Examples</h3>
+                <pre class="code-block"><span class="code-highlight">h2#section-one</span> {
+    letter-spacing: 2px;
+}</pre>
+                <p>This rule targets an h2 element that also has the id "section-one".</p>
+                <pre class="code-block"><span class="code-highlight">.nav-button#home-button</span> {
+    background-color: blue;
+}</pre>
+                <p>This rule targets an element with the class "nav-button" that also has the id "home-button".</p>
+                <pre class="code-block"><span class="code-highlight">header img.logo</span> {
+    width: 20px;
+    height: 20px;
+}</pre>
+                <p>This rule targets any img element with the class "logo" that is a descendant of a header element.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4">Github Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+
