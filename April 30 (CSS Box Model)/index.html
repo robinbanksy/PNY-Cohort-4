@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>April 29</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (April 30)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>CSS Box Model</h2>
+                <p>You may have noticed that HTML elements often have a <strong>margin</strong> around them. This margin can be seen clearly when we apply a background color to the element.</p>
+                <iframe src="demos/margin-demo.html" frameborder="0"></iframe>
+                <p>By default, HTML elements are rendered with some margin, so that they are spaced out from each other. But often we want to customize this spacing, or remove it entirely. We can do this by setting the margin property in our CSS:</p>
+                <pre class="code-block"><code>* {
+    margin: 0;
+}</code></pre>
+                <p>The star selector "*" targets all HTML elements on the page, so setting the margin to 0 removes the default spacing around all elements, including the body.</p>
+                <iframe src="demos/margin-zero.html" frameborder="0"></iframe>
+                <p>Margin, along with <strong>padding</strong> and <strong>border</strong>, makes up the CSS box model. The box model is a way of thinking about the layout of HTML elements. Essentially, each HTML element can be thought of as a box, in which other elements, the <strong>content</strong>, can be contained. Margin, border, and padding are properties of this box.</p>
+                <p><strong>Margin</strong>, as covered, is a spacing property that adds space <strong>outside</strong> of an element's border.</p>
+                <p><strong>Border</strong> is a property that adds a border around an element. The border can be styled in various ways, such as solid, dashed, or dotted, and can have different colors and widths.</p>
+                <p><strong>Padding</strong> is a spacing property that adds space <strong>inside</strong> an element's border, between the border and the <strong>content</strong> of the element.</p>
+                <p>To see how these properties work together, let's look at an example:</p>
+                <p>Here's a diagram of the CSS box model:</p>
+                <img src="demos/box-model.png" alt="CSS Box Model Diagram">
+                <p>And here's a demo of margin, padding, and border in action. Try clicking the buttons to see what happens when we have or don't have one of the three:</p>
+                <iframe src="demos/box-model-demo.html" frameborder="0" class="iframe-large"></iframe>
+                <h3>Borders</h3>
+                <p>By default, HTML elements' border is not visible. In order to make it visible, we can set certain CSS properties pertaining to borders:</p>
+                <pre class="code-block"><code>.box {
+    border-style: dashed;
+    border-width: 3px;
+    border-color: blue;
+}</code></pre>
+                <p>We can also use the shorthand property <code>border</code> to set all border properties at once:</p>
+                <pre class="code-block"><code>.box {
+    border: dashed 3px blue;
+}</code></pre>
+                <h3>Padding</h3>
+                <p>Padding is a spacing property that adds space inside an element's border, between the border and the content of the element.</p>
+                <pre class="code-block"><code>.box {
+    padding: 20px;
+}</code></pre>
+                <p>In this example, we set the padding to 20px, which adds 20 pixels of space between the content of the element and its border on all sides.</p>
+                <p>Similar to the border property, the padding property is actually a shorthand property that combines the four padding values (top, right, bottom, left). If we want a different amount of padding on each side, we can specify them individually:</p>
+                <pre class="code-block"><code>.box {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+}</code></pre>
+                <p>Or we can use the shorthand property with different values for each side:</p>
+                <pre class="code-block"><code>.box {
+    padding: 10px 15px 20px 25px;
+}</code></pre>
+                <h3>Margin</h3>
+                <p>Margin works in much the same way as padding, but it adds space <strong>outside</strong> of an element's border.</p>
+                <pre class="code-block"><code>.box {
+    margin: 20px;
+}</code></pre>
+                <pre class="code-block"><code>.box {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}</code></pre>
+                <pre class="code-block"><code>.box {
+    margin: 10px 15px 20px 25px;
+}</code></pre>
+            </section>
+            <section class="content">
+                <h2>Box Sizing</h2>
+                <p>By default, the <strong>width</strong> and <strong>height</strong> of an element are determined by <strong>its content area only</strong>. This means that when you set a width or height on an element, it only affects the content area, and any padding or border will be added to the total width and height.</p>
+                <p>If we also set values for padding and border, the total width and height may differ from the specified width and height. This can result in unexpected layout issues, such as elements overflowing their containers.</p>
+                <p>Observe the following demo:</p>
+                <iframe src="demos/box-sizing-demo.html" frameborder="0" class="iframe-large"></iframe>
+                <p>Notice how by default, the child element overflows its parent, because its padding and thick border cause its actual width and height to be larger than the specified values. By setting the <strong>box-sizing</strong> property to <strong>border-box</strong>, we can change this behavior, so padding and border are factored into the specified width and height.</p>
+                <pre class="code-block"><code>.box {
+    box-sizing: border-box;
+}</code></pre>
+                <p>This box-sizing mode is often preferred because it makes it easier to predict the final size of an element, so we often use the star selector to apply it globally:</p>
+                <pre class="code-block"><code>* {
+    box-sizing: border-box;
+}</code></pre>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4">Github Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+

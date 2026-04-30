@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .box {
+            border: solid 1px black;
+            padding: 20px;
+            margin: 20px;
+            transition: margin 0.3s ease, padding 0.3s ease;
+        }
+
+        .box.margin-0 {
+            margin: 0;
+        }
+
+        .box.padding-0 {
+            padding: 0;
+        }
+
+        .box.border-none {
+            border: none;
+        }
+
+        .controls {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 20px;
+            left: 0px;
+        }
+
+        .controls::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #969696;
+            top: -20px;
+        }
+
+        .controls button {
+            padding: 7px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box.
+        <div class="box">This is a box in a box.</div>
+        <div class="box">This is another box in a box.</div>
+    </div>
+    <div class="controls">
+        <button>Toggle Margin</button>
+        <button>Toggle Padding</button>
+        <button>Toggle Border</button>
+    </div>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const buttons = document.querySelectorAll('.controls button');
+        buttons[0].addEventListener('click', () => {
+            boxes.forEach(box => box.classList.toggle('margin-0'));
+        });
+        buttons[1].addEventListener('click', () => {
+            boxes.forEach(box => box.classList.toggle('padding-0'));
+        });
+        buttons[2].addEventListener('click', () => {
+            boxes.forEach(box => box.classList.toggle('border-none'));
+        });
+    </script>
+</body>
+</html>
