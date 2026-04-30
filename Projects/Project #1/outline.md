@@ -10,7 +10,7 @@ Before you begin working on the website proper, you must complete a simple sketc
 
 ### Website requirements:
 - The website may have a single webpage (One HTML document) or multiple, but all pages must be properly navigable (i.e. A user must be able to access all pages of your site via anchor links)
-- The website must use proper semantic structure; make use of semantic tags like <header>, <nav>, <aside>, and <footer>, as appropriate, as well as heading tags (<h1> through <h6>)
+- The website must use proper semantic structure; make use of semantic tags like the header, nav, aside, and footer tags, as appropriate, as well as heading tags
 - The website must include at least one image
 - The website must include an external CSS stylesheet
 
