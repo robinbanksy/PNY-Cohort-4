@@ -3,9 +3,9 @@
 Our first project involved the building of a simple website about a topic of your interest. This topic must be approved by the instructor. 
 
 
-## The Project:
+## The Project
 
-### Initial Sketch
+### Initial Sketch:
 Before you begin working on the website proper, you must complete a simple sketch of your website. This can be done in any form, including digitally, or on a piece of paper. **It does not need to be pretty.** It only needs to be a blueprint for what eventually becomes the finished website.  
 
 ### Website requirements:
