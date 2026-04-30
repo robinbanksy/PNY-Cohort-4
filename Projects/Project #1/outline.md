@@ -17,7 +17,7 @@ Before you begin working on the website proper, you must complete a simple sketc
 
 ## Submission
 
-### How to sumbit:
+### How to submit:
 Your project submission will be in the form of a GitHub repository. Make sure the repository is public, and send a link to the repository to the email: umair.almahmood10@gmail.com
 
 ### Submission repository must include:
