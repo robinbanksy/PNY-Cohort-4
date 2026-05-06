@@ -1,0 +1,124 @@
+:root {
+    --bg-color: #eae8e5;
+    --fg-color: #3d3c3b;
+    --link-color: #3a4377;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url(./fonts/EB\ Garamond/EB_Garamond/EBGaramond-VariableFont_wght.ttf) format('truetype');
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+    font-size: 18pt;
+    line-height: 1.5rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: min(70%, 800px);
+    margin: 0 auto;
+    padding: 2rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+}
+
+.content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.indent{
+    margin-left: 1rem;
+}
+
+.code-block {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 0.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+code {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1rem 0;
+    color: hsl(from var(--fg-color) h s 65%);
+}
+
+footer a {
+    color: hsl(from var(--fg-color) h s 65%);
+    font-weight: 500;
+}
+
+.demo {
+    transition: all 0.3s ease;
+    position: relative;
+}
+.demo::before {
+    content: "";
+    display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: var(--fg-color);
+    position: absolute;
+    top: 0.55rem;
+    left: -1.2rem;
+    transform: rotate(45deg);
+}
+.demo::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 0.5rem;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 0.2rem;
+    left: -1.5rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+a:hover {
+    color: hsl(from var(--link-color) h s 60%);
+}

@@ -1,0 +1,26 @@
+
+
+.tight:hover {
+    line-height: 1rem;
+}
+
+.loose:hover {
+    line-height: 5rem;
+}
+.loose:hover 
+
+.wide:hover {
+    letter-spacing: 0.5rem;
+}
+
+.serif {
+    font-family: serif;
+}
+
+.san-serif {
+    font-family: sans-serif;
+}
+
+.monospace {
+    font-family: monospace;
+}

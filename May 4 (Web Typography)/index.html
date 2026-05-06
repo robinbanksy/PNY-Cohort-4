@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="type.css">
+    <title>May 4th</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="content">
+            <h1>Web Typography.</h1>
+            <p>Typography is the art of arranging type in order to ensure that it is readable and aesthetically pleasing. Web typography, in kind, is the practice of using typography on the web.</p>
+            <p>Today we'll be exploring the principles of web typography, and some practical tips on how to handle fonts for your webpages.</p>
+        </header>
+        <section class="content principles">
+            <h2>Principles of Web Typography</h2>
+            <ul>
+                <li><span class="bold">Readability:</span class="bold"> Your text should be easy to read. This includes choosing the specific fonts you're going to use, but also involves setting proper font sizes, line heights, and letter spacings.</li>
+                <li><span class="bold">Hierarchy:</span class="bold"> Use different font sizes and weights to create a visual hierarchy that guides the reader's eye through the content.</li>
+                <li><span class="bold">Consistency:</span class="bold"> Maintain a consistent typographic style throughout your website to create a cohesive look.</li>
+            </ul>
+        </section>
+        <section class="content line-heights">
+            <h2>Line Heights</h2>
+            <p>Proper line height is crucial for readability.</p>  
+            <p class="tight demo"><strong>If line heights are too tight, text can appear cramped: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quaerat dicta minus error pariatur ipsum, voluptatem, ex neque vitae natus aliquid, dolorem illo tempore consequatur? Dolorum, atque debitis. Minus, officiis?</p>            
+            <p class="loose demo"><strong>If it's too loose, text loses cohesion: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quaerat dicta minus error pariatur ipsum, voluptatem, ex neque vitae natus aliquid, dolorem illo tempore consequatur? Dolorum, atque debitis. Minus, officiis?</p>
+        </section>
+        <section class="content letter-spacing">
+            <h2>Letter Spacing</h2>
+            <p>Proper letter spacing can improve readability and create a more visually appealing text layout.</p>
+            <p>Non-standard letter spacing can be used to create visual interest or to improve readability in certain contexts.</p>
+            <p class="wide demo"><span class="bold">It can look quite striking,</span> but if you push it too far, it can become difficult to read.</p>
+            <p>So, if you don't want to worry about it, you're usually safe to stick to your chosen font's default letter spacing.</p>
+        </section>
+        <section class="content font-selection">
+            <h2>Font Selection</h2>
+            <p>Finally, let's talk about actually choosing fonts. There are a number of considerations when doing so:</p>
+            <ul>
+                <li><span class="bold">Web Safety:</span> Choose fonts that are widely supported across different browsers and devices. The rest doesn't matter if your font can't be displayed at all. If you want to use an uncommon or custom font, make sure to ship it with your website.</li>
+                <li><span class="bold">Style:</span> There are a few different styles of fonts to consider:</li>
+            </ul>
+            <ul class="indent">
+                <li><span class="serif bold">Serif</span> fonts have a look that could be described as "classical"</li>
+                <li><span class="san-serif bold">Sans-serif</span> fonts have a clean, modern look</li>
+                <li><span class="monospace bold">Monospace</span> fonts have equal width characters. Originating with typewriters, nowadays they're often used to display code</li>
+            </ul>
+            <p>Of course, when choosing a font style, aesthetics can and should be a concern. However, you should also consider readability; for example, sans-serif fonts are often more readable at smaller sizes than serif fonts. On the other hand, serif fonts can be more readable at larger sizes, and at higher resolutions.</p>
+        </section>
+        <section class="content web-safety">
+            <h2>Web Safety</h2>
+            <p>As mentioned before, web safety is a crucial consideration when choosing fonts for your website. If a font isn't supported by a user's browser or device, it will be replaced with a default font, which can lead to a disjointed and unprofessional appearance.</p>
+            <p>To ensure web safety, it's best to use widely supported fonts or to include fallback options in your CSS. For example:</p>
+            <pre class="code-block"><code>font-family: 'CustomFont', Arial, sans-serif;</code></pre>
+            <p>In this example, if 'CustomFont' isn't available, the browser will fall back to Arial, and if Arial isn't available, it will fall back to the default sans-serif font.</p>
+        </section>
+        <section class="content custom-fonts">
+            <h2>Custom Fonts</h2>
+            <p>If you want to use a custom font that isn't widely supported, you can include it in your website using the @font-face rule in your CSS. This allows you to specify a font file that will be downloaded and used by the browser.</p>
+            <div class="code-block">
+<pre><code>@font-face {
+    font-family: 'CustomFont';
+    src: url('CustomFont.ttf') format('ttf'),
+    url('CustomFont.ttf') format('ttf');
+ }</code></pre></div>
+            <p>In the CSS above, the @font-face rule defines a custom font called 'CustomFont' and specifies the font files that should be used. The browser will download these files and use 'CustomFont' when it's specified in the font-family property.</p>
+            <p>Keep in mind that using custom fonts can increase the load time of your website. This is less of a concern nowadays, but it's still something to consider.</p>
+        </section>
+        <section class="content getting-fonts">
+            <h2>Getting Fonts</h2>
+            <p>If we want customs fonts, we have to get them from somewhere. The most important thing to remember when you do this is that even on the internet, most things belong to someone. Chances are, if you want to use something, you'll have to pay for it, or at the very least have to adhere to a license agreement.</p>
+            <p>That being said, there are many resources available for finding and obtaining fonts, some of which are free. For example, Google has a large font library that is free to use for both personal and commercial projects. Still, make sure to read the corresponding license agreements and make sure you are complying with them.</p>
+            <p><a href="https://fonts.google.com/" target="_blank">Google Fonts</a>: A large collection of free and open-source fonts.</p>
+        </section>
+        <section class="content learn-more">
+            <h2>More Information</h2>
+            <p>Here I've only covered the very basics of typography that you'll need for web development. There's an entire field of typography, which, if you are interested in learning more about, I've included resources below:</p>
+            <ul>
+                <li><a href="http://www.typography101.net/" target="_blank">Typography 101</a>: A fairly comprehensive guide to typography principles, including a deeper dive into the catergorization of type-faces.</li>
+                <li><a href="https://fontforge.org/en-US/" target="_blank">FontForge</a>: A free, open-source font editor that allows you to create and modify fonts.</li>
+                <li><a href="https://openfontlicense.org/" target="_blank">Open Font License</a>: The official site of the SIL Open Font License, one of the more common open-source font licenses.</li>
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4" target="_blank">GitHub Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
