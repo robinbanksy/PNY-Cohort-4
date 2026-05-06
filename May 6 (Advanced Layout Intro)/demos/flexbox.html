@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Demo</title>
     <style>
+
+        /* The container is given the display mode of 'flex' */
+        /* This both turns the container into a 'flex container' and its children into 'flex items' */
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -20,6 +23,8 @@
             padding: 5px;
             border: 3px solid #d61a52;
             border-radius: 5px;
+
+            /* Since this is a flex item, it can be controlled with flex properties */
             /* flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 100px; */
@@ -49,11 +54,9 @@
         .controls button:hover {
             background-color: #ac0e52;
         }
-
         body {
             font-family: 'Courier New', Courier, monospace;
         }
-
         .display-mode {
             color: #d61a52;
             font-weight: bold;
@@ -62,6 +65,9 @@
 </head>
 <body>
     <h1>The Element Below is a <span class="display-mode">Flex</span> Container</h1>
+
+    <!-- Element with multiple children -->
+    <!-- The CSS above gives the container the flex display property -->
     <div class="container">
         <div class="item">Item 1</div>
         <div class="item">Item 2</div>
@@ -69,6 +75,8 @@
         <div class="item">Item 4</div>
         <div class="item">Item 5</div>
     </div>
+
+
     <div class="controls">
         <button id="flex-toggle">Toggle Flexbox</button>
     </div>

@@ -6,36 +6,42 @@
     <title>Columns Demo</title>
 
     <style>
+        /* By default, all columns have a count of 1 */
+        .one-column {
+            column-count: 1;
+            padding: 1rem;
+        }
+
+        /* Two Column Layout */
+        .two-columns {
+            column-count: 2;
+            padding: 1rem;
+        }
+
+        /* Three Column Layout */
+        .three-columns {
+            column-count: 3;
+            padding: 1rem;
+        }
+
+
         * {
             box-sizing: border-box;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
         }
-        .one-column {
-            column-count: 1;
-            padding: 1rem;
-        }
-        .two-columns {
-            column-count: 2;
-            padding: 1rem;
-        }
-        .three-columns {
-            column-count: 3;
-            padding: 1rem;
-        }
-
         h2 {
             margin-bottom: 1rem;
             color: #d61a52;
         }
-
         p {
             margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
+    <!-- All of these divs are identical, except for their column count -->
     <div class="one-column">
         <h2>Single Column Layout</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
