@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>May 6</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (May 6)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>Advanced Layout Using CSS</h2>
+                <p>So far, we've learned to use CSS to make changes to the appearance of the content of our web pages by doing things such as changing colors, or the sizes of elements, or changing fonts. On the other hand, our pages have all still used a basic <strong>inline</strong> layout (the default HTML layout).</p>
+                <p>Today, we'll see how CSS can be used to not only change the appearance of our content, but also to create more complex and flexible layouts.</p>
+            </section>
+            <section class="content">
+                <h2>Simple CSS Layout</h2>
+                <p>A very simple example of how CSS can affect layout is by formating our content into multiple columns.</p>
+                <p>To do this, we can use the <code>column-count</code> property. This property specifies the number of columns an element should be divided into.</p>
+                <p>For example, if we have a <code>&lt;div&gt;</code> element with the class <code>.content</code>, we can use the following CSS to divide its content into 3 columns:</p>
+                <pre class="code-block"><code>.content {
+    column-count: 3;
+}</code></pre>
+                <p>This will cause the content inside the <code>.content</code> element to be displayed in 3 columns, with the content flowing from one column to the next. This allows for a more organized and visually appealing layout, while still maintaining its default inline nature.</p>
+                <iframe class="iframe-large" src="./demos/columns.html" frameborder="0"></iframe>
+            </section>
+            <section class="content">
+                <h2>The Display Property</h2>
+                <p>The <code>display</code> property in CSS controls how an element is displayed on the page. By default, most elements are displayed as either <code>inline</code> or <code>block</code>, depending on the element.</p>
+                <h3>Block Display</h3>
+                <p>Block displayed elements start on a new line and take up the entire width of their container by default. Paragraph (<code>&lt;p&gt;</code>) tags, heading (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>) tags, and <code>&lt;div&gt;</code> tags are examples of block-displayed elements.</p>
+                <p>We can also make elements display as block by setting the <code>display</code> property to <code>block</code>:</p>
+                <pre class="code-block"><code>.my-element {
+    display: block;
+}</code></pre>
+                <h3>Inline Display</h3>
+                <p>Unlike block-displayed elements, inline-displayed elements do not start on a new line and only take up as much width as necessary. Anchor (<code>&lt;a&gt;</code>) tags and <code>&lt;span&gt;</code> tags are examples of inline-displayed elements. When you put an anchor tag within a paragraph, for example, the resulting link won't break up the rest of the text.</p>
+                <p>We can also make elements display as inline by setting the <code>display</code> property to <code>inline</code>:</p>
+                <pre class="code-block"><code>.my-element {
+    display: inline;
+}</code></pre>
+                <h3>Inline-Block Display</h3>
+                <p>Inline-block displayed elements are similar to inline elements, but they can have a width and height set. This is useful for creating navigation menus or other elements that need to be displayed inline but also have a specific size.</p>
+                <p>We can make elements display as inline-block by setting the <code>display</code> property to <code>inline-block</code>:</p>
+                <pre class="code-block"><code>.my-element {
+    display: inline-block;
+}</code></pre>
+                <h3>Display: None</h3>
+                <p>Another display option is the <code>none</code> value, which completely removes an element from the page:</p>
+                <pre class="code-block"><code>.my-element {
+    display: none;
+}</code></pre>
+                <p>When an element is set to <code>display: none;</code>, it will not be visible on the page, and will not take up any space. This can be useful when you have an element that should only be visible under certain conditions.</p>
+                <h3>Display Mode Demo</h3>
+                <iframe class="iframe-large" src="./demos/display-mode-demo.html" frameborder="0"></iframe>
+            </section>
+            <section class="content">
+                <h2>Flexbox</h2>
+                <p>Flexbox is yet another display mode, but unlike those already covered, flexbox is much more powerful and flexible. When an element is set to <code>display: flex;</code>, it becomes a flex container, and its direct children become flex items. A flexbox arranges its child elements either in columns or rows, and can automatically modify the height or width of the child elements to better fit the available space.</p>
+                <iframe class="iframe-large" src="./demos/flexbox.html" frameborder="0"></iframe>
+                <p>In the demo above, we can see how flexboxes can change the way elements are arranged. The most notable change, at first glance, is that the items within the flex container are arranged horizontally, as opposed to vertically. This is because, by default, the <code>flex-direction</code> property is set to <code>row</code>.</p>
+                <p>Like <code>flex-direction</code> flexbox provides many properties unique to flex containers and flex items, which we will explore in more depth in the future. Some examples include <code>flex-basis</code>, <code>flex-wrap</code>, <code>flex-grow</code>, and <code>flex-shrink</code></p>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4">Github Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+

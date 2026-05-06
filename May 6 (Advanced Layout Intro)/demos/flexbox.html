@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Demo</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 3px solid #d61a52;
+            border-radius: 10px;
+        }
+        
+        .item {
+            color: #d61a52;
+            padding: 5px;
+            border: 3px solid #d61a52;
+            border-radius: 5px;
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100px; */
+        }
+
+
+        .controls {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-top: #afafaf 1px solid;
+        }
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #d61a52;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background-color: #ac0e52;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .display-mode {
+            color: #d61a52;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Element Below is a <span class="display-mode">Flex</span> Container</h1>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+    <div class="controls">
+        <button id="flex-toggle">Toggle Flexbox</button>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const toggleButton = document.getElementById('flex-toggle');
+        const displayMode = document.querySelector('.display-mode');
+
+        toggleButton.addEventListener('click', () => {
+            if (container.style.display === 'flex') {
+                container.style.display = 'block';
+                displayMode.textContent = 'Block';
+            } else {
+                container.style.display = 'flex';
+                displayMode.textContent = 'Flex';
+            }
+        });
+    </script>
+</body>
+</html>

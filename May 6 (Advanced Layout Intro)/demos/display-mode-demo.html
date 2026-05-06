@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Mode Demo</title>
+    <style>
+        .block-element {
+            display: block;
+        }
+
+        .inline-element {
+            display: inline;
+        }
+
+        .inline-block-element {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+        }
+
+        .none-element {
+            display: none;
+        }
+
+
+        .insert {
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h2>Block Display</h2>
+        <p>This is a paragraph inside which a <span class="block-element insert">block displayed element</span> is placed. The block element breaks the flow of the text.</p>
+    </div>
+    <div class="inline">
+        <h2>Inline Display</h2>
+        <p>This is a paragraph inside which an <span class="inline-element insert">inline displayed element</span> is placed. The inline element does not break the flow of the text.</p>
+    </div>
+    <div class="inline-block">
+        <h2>Inline-Block Display</h2>
+        <p>This is a paragraph inside which an <span class="inline-block-element insert">inline-block displayed element</span> is placed. The inline-block element does not break the flow of the text, but it can have a width and height set.</p>
+    </div>
+    <div class="none">
+        <h2>Display: None</h2>
+        <p>This is a paragraph inside which an [<span class="none-element insert">element with display set to none</span>] is placed. The element with display set to none will not be visible on the page, and will not take up any space.</p>
+    </div>
+</body>
+</html>
