@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>May 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (May 7)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>Responsive Web Design</h2>
+                <p>When we design webpages, we are almost always doing it on a desktop or laptop computer. However, in the modern day, it's very possible that the majority of our users will instead be accessing our websites on mobile devices.</p>
+                <p>Unsurprisingly, the difference in screen size and orientation can significantly impact how our content is displayed and interacted with. To address this, we make use of the concept of <strong>responsive design</strong>.</p>
+                <p>The idea behind responsive design is to create webpages that automatically adjust their layout and content to best accomodate the properties of the client device. In the most extreme cases, this could mean that a webpage has one layout for desktops and a completely different one for mobile devices.</p>
+                <h3>Key Principles of Responsive Design</h3>
+                <p>So, how do we apply responsive design in our projects? The answer can vary depending on the specifics of each webpage, but we can define our approach based on the following principles:</p>
+                <ol>
+                    <li><strong>Less in more:</strong> If you make a very simple HTML page with minimal styling, it's very likely that it will already be responsive; by default, text content in an HTML document will wrap to fit available space. What this means is that if we are having issues with responsivity, it's probably because of something we've added to our CSS styling.</li>
+                    <li><strong>Use explicit dimensions sparingly:</strong> When we specify a fixed width or height to an element, we prevent that element from modifying its size to fit the page or its content. A common solution is to instead use <code>max-width</code>, <code>max-height</code>, <code>min-width</code>, and <code>min-height</code>. In some cases, we can also make use of relative units like <code>%</code> or <code>em</code>, which can change to match client device properties.</li>
+                    <li><strong>Use flexible layouts:</strong> Instead of using fixed positioning, consider using CSS <strong>Flexbox</strong> to create layouts that can adapt to different screen sizes and orientations.</li>
+                    <li><strong>Use media queries:</strong> If all else fails, we can use <strong>media queries</strong> to apply different styles based on the characteristics of the client device.</li>
+                </ol>
+                <h3>Meta Viewport Tag</h3>
+                <p>As an aside, many mobile browsers operate in such a way that they assume the webpage is designed for a desktop screen. As a result, they often render the webpage at a full desktop size and then shrink it to fit the mobile screen size. This can result in content being reduced to an unreadable size. Thankfully, the fix is easy; we simple include the following metadata tag in the <code>&lt;head&gt;</code> section of our HTML documents:</p>
+                <pre class="code-block"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+            </section>
+            <section class="content">
+                <h2>Media Queries</h2>
+                <p><strong>Media queries</strong> are a feature in CSS that allow us to ask the client device about its characteristics, such as its width, height, and orientation. We can then apply different styles based on these characteristics.</p>
+                <p>Below is an example of a media query:</p>
+                <pre class="code-block"><code><span class="code-highlight">@media</span> (max-width: 800px) {
+    /* CSS rules for screens with a maximum width of 800px */
+}</code></pre>
+                <p>As seen above, the query begins with the flag <code>@media</code>, followed by a condition in parentheses. The condition specifies the characteristics of the client device for which the styles should be applied, in this case, screens with a maximum width of 800px. This means that we can have one set of CSS rules for when the screen is smaller than 800px and another set for larger screens.</p>
+                <p>If we wanted to follow a "mobile-first" approach, we could do the opposite; our base CSS could be focused on mobile devices, while our media query used the condition <code><span class="code-highlight">min-width: 800px</span></code> to target wide-screen devices.</p>
+                <p>Media queries can also be used to query user preferences, such as a preference for reduced motion, or whether the user's device uses a dark theme:</p>
+                <pre class="code-block"><code><span class="code-highlight">@media</span> (prefers-reduced-motion: reduce) {
+    /* CSS rules for users who prefer reduced motion */}</code></pre>
+                <pre class="code-block"><code><span class="code-highlight">@media</span> (prefers-color-scheme: dark) {
+    /* CSS rules for users who prefer a dark theme */}</code></pre>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4" target="_blank">Github Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+
