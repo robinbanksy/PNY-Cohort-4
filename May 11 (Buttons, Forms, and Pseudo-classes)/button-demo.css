@@ -1,0 +1,185 @@
+:root {
+    --red: #e85466;
+    --yellow: #ffc44d;
+    --blue: #4f4fb6;
+}
+
+/* Button styling */
+.demo-button.styled {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+/* Defines the styling when the button is hovered */
+.demo-button.styled:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+/* Defines the styling when the button is clicked */
+.demo-button.styled:active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(95%);
+}
+
+/* Three-Dimensional Button */
+.demo-button.three-dee {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    border-radius: 5px;
+    box-shadow: 0 6px 0 hsl(from var(--red) h 75% 40%);
+}
+.demo-button.three-dee:active {
+    background-color: var(--red);
+    color: white;
+    transform: translateY(6px);
+    box-shadow: none;
+}
+
+/* Gradient Button */
+.demo-button.gradient {
+    background: linear-gradient(45deg, var(--red), var(--yellow));
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 4px;
+    transition: all 0.3s ease;
+}
+.demo-button.gradient:hover {
+    background: linear-gradient(45deg, var(--yellow), var(--red));
+    color: white;
+    filter: brightness(1.2);
+}
+.demo-button.gradient:active {
+    background: linear-gradient(45deg, var(--red), var(--yellow));
+    color: white;
+    filter: brightness(0.8);
+}
+
+/* Outline Button */
+.demo-button.outline {
+    background-color: transparent;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.demo-button.outline:hover {
+    background-color: var(--blue);
+    color: white;
+}
+.demo-button.outline:active {
+    background-color: transparent;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
+/* Pill Button */
+.demo-button.pill {
+    background-color: var(--yellow);
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 9999px;
+    box-shadow: rgba(34, 23, 0, 0.25) 0px -50px 10px -28px inset, rgba(34, 23, 0, 0.5) 0px 5px 5px;
+    transition: all 0.2s;
+    position: relative;
+}
+.demo-button.pill:hover {
+    transform: rotate(5deg);
+    color: black;
+}
+.demo-button.pill:active {
+    background-color: var(--yellow);
+    transform: rotate(10deg);
+    color: black;
+}
+.demo-button.pill::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 15px;
+    background-color: hsl(from var(--yellow) h 100% 90% / 0.4);
+    border-radius: 50px;
+    top: 5px;
+    left: calc(50% - 40%);
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.demo-button {
+    flex-grow: 0;
+}
+
+.demo-button.hover {
+    background-color: var(--blue);
+    padding: 0.5rem 1rem;
+    color: white;
+}
+.demo-button.hover:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+.demo-button.active {
+    background-color: var(--yellow);
+    padding: 0.5rem 1rem;
+    color: black;
+}
+.demo-button.active:active {
+    background-color: var(--yellow);
+    color: black;
+    transform: scale(95%);
+}
+
+.demo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    width: var(--content-width);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.demo-form.focus:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 5px;
+}
+
+.demo-anchor {
+    color: var(--blue);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.demo-anchor.visited:visited {
+    color: var(--red);
+}
+
+.demo-list.f-and-l :first-child {
+    color: var(--blue);
+}
+.demo-list.f-and-l :last-child {
+    color: var(--red);
+}
+
+.demo-list.nth-child :nth-child(2) {
+    color: var(--red);
+}

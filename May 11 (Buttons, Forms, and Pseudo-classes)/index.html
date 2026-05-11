@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button-demo.css">
+    <title>May 11</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (May 11)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>Buttons</h2>
+                <p><strong>Buttons</strong> allow us to provide interactive elements on our webpage. In future classes, we will learn how to program these buttons using JavaScript, but for now, we'll focus on the visual and layout aspects.</p>
+                <pre class="code-block"><code>&lt;button&gt;Click Me!&lt;/button&gt;</code></pre>
+                <div class="button-demo inline-demo">
+                    <button class="demo-button">Click Me!</button>
+                </div>
+                <p>Above is a basic button element. We can see that the button has a default styling applied by the browser, including a background color, border, and text color. Of course, we can customize all of this using CSS.</p>
+                <pre class="code-block"><code>.demo-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+}</code></pre>
+                <div class="button-demo inline-demo">
+                    <button class="demo-button styled">Click Me!</button>
+                </div>
+                <p>Using CSS, we have a large degree of control over the appearance and behavior of buttons. Notice that aside from basic styling, the button changes its appearance when hovered over and when clicked. Later in this lesson, we'll see how we can achieve this.</p>
+                <h3>Button Styling Examples</h3>
+                <div class="button-demo inline-demo">
+                    <button class="demo-button three-dee">Click Me!</button>
+                    <button class="demo-button gradient">Click Me!</button>
+                    <button class="demo-button outline">Click Me!</button>
+                    <button class="demo-button pill">Click Me!</button>
+                </div>
+            </section>
+            <section class="content">
+                <h2>Forms</h2>
+                <p>Another way to collect user input is through <strong>forms</strong>. Forms allow users to enter data, which can then be submitted to a server for processing. Just like with buttons, forms are often integrated with JavaScript, and can be styled with CSS.</p>
+                <pre class="code-block"><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input <span class="code-highlight">type="text"</span> id="name" name="name"&gt;
+    &lt;button <span class="code-highlight">type="submit"</span>&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                <div class="form-demo inline-demo">
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <p>In the example above, we have a simple form with a text input and a submit button. The <strong>label</strong> element is used to provide a description for the input field. Notice that both the text input and the submit button are actually both created using the <code>&lt;input&gt;</code> element, but have different <code>type</code> attributes.</p>
+                <p>This <code>&lt;input&gt;</code> element is used to create various kinds of input fields, such as text fields, radio buttons, and checkboxes:</p>
+                <pre class="code-block"><code>&lt;input type="text" placeholder="Text input"&gt;
+&lt;input type="radio" name="option"&gt;
+&lt;input type="checkbox" name="option"&gt;</code></pre>
+                <div class="form-demo inline-demo">
+                    <input type="text" placeholder="Text input">
+                    <input type="radio" name="option" id="option1">
+                    <label for="option1">Radio button</label>
+                    <input type="checkbox" name="option" id="option2">
+                    <label for="option2">Checkbox</label>
+                </div>
+            </section>
+            <section class="content">
+                <h2>Pseudo-classes</h2>
+                <p>In CSS, we sometimes need to style elements based on specific states or properties. For example, we've seen that buttons can change their appearance when hovered over or clicked. This is achieved using what are called <strong>pseudo-classes</strong>.</p>
+                <p>Pseudo-classes are keywords that are added to a CSS selector, and they allow us to apply styles to elements based on their state or position in the document.</p>
+                <h3>Hover</h3>
+                <p>The <code>:hover</code> pseudo-class applies styles to an element when the user hovers over it with their mouse. For example:</p>
+                <pre class="code-block"><code>.demo-button:hover {
+    background-color: var(--secondary-color);
+}</code></pre>
+                <div class="button-demo inline-demo">
+                    <button class="demo-button hover">Hover Me!</button>
+                </div>
+                <p>While this pseudo-class is very often used on buttons, such as above, it can be used on essentially any element. It should be noted, however that hover effects don't always work as intended on touch-screen devices, so it's important to consider this when designing for different platforms.</p>
+                <h3>Active</h3>
+                <p>The <code>:active</code> pseudo-class applies styles to an element when it is being activated by the user, such as when a button is being clicked. For example:</p>
+                <pre class="code-block"><code>.demo-button:active {
+    transform: scale(0.95);
+}</code></pre>
+                <div class="button-demo inline-demo">
+                    <button class="demo-button active">Click Me!</button>
+                </div>
+                <h3>Focus</h3>
+                <p>The <code>:focus</code> pseudo-class applies styles to an element when it has received focus, such as when a user clicks on an input field or navigates to it using the keyboard. For example:</p>
+                <pre class="code-block"><code>input:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 5px;
+}</code></pre>
+                <div class="form-demo inline-demo">
+                    <input type="text" placeholder="Focus me!" class="demo-form focus">
+                </div>
+                <p>Remember that focus styles are important for accessibility, as they help users understand which element currently has focus. Always ensure that if you override default focus styling that it remains visible and distinguishable.</p>
+                <h3>Visited</h3>
+                <p>The <code>:visited</code> pseudo-class applies styles to an element that has been visited by the user. For example:</p>
+                <pre class="code-block"><code>a:visited {
+    color: var(--secondary-color);
+}</code></pre>
+                <div class="inline-demo">
+                    <a href="#" class="demo-anchor visited">Visited Link</a>
+                </div>
+                <p>After the link has been visited, it will change to display the <code>:visited</code> style.</p>
+                <h3>First-child and Last-child</h3>
+                <p>The <code>:first-child</code> and <code>:last-child</code> pseudo-classes apply styles to the first and last child elements of their parent, respectively. For example:</p>
+                <pre class="code-block"><code>li:first-child {
+    color: var(--primary-color);
+}
+li:last-child {
+    color: var(--secondary-color);
+}</code></pre>
+                <div class="inline-demo">
+                    <ul class="demo-list f-and-l">
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                        <li>Last item</li>
+                    </ul>
+                </div>
+                <h3>Nth Child</h3>
+                <p>The <code>:nth-child(n)</code> pseudo-class applies styles to the nth child element of its parent. For example:</p>
+                <pre class="code-block"><code>li:nth-child(2) {
+    color: var(--primary-color);
+}</code></pre>
+                <div class="inline-demo">
+                    <ul class="demo-list nth-child">
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                        <li>Fourth item</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4" target="_blank">Github Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+
