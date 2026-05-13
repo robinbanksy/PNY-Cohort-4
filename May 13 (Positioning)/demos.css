@@ -1,0 +1,22 @@
+
+.position-demo-para {
+    outline: 2px solid var(--primary-color);
+    padding-left: 0.5rem;
+}
+
+.position-demo-para.relative {
+    position: relative;
+    left: 100px;
+}
+
+.position-demo-parent {
+    position: relative;
+    outline: 2px solid var(--primary-color);
+    padding: 2rem;
+}
+
+.position-demo-para.absolute {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

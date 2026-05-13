@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="demos.css">
+    <title>May 13</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (May 13)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>The Position Property</h2>
+                <p>In CSS, the <code>position</code> property gives us a greater degree of control over the placement on individual elements. The default value is <code>static</code>, which causes the element to be positioned according to the flow of the document. There are a number of alternative values.</p>
+                <h3>Relative</h3>
+                <p>The <code>relative</code> value positions the element <strong>relative</strong> to its usual document flow position. Initially, an element switched from <code>static</code> to <code>relative</code> shows no change in positioning. The difference lies in the availability of the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> CSS properties. These properties allow us to define offsets from the element's initial position. A value of <code>0</code> results in no gap between the element and the side being defined; the larger the value, the further the element will be placed from that side.</p>
+                <p>For example, if the <code>left</code> property is defined as <code>100px</code>, the element will be positioned a hundred pixels to the right of its initial document flow position.</p>
+                <pre class="code-block"><code>.relative-element {
+    position: relative;
+    left: 100px;
+}</code></pre>
+                <p class="position-demo-para">This is a <strong>statically positioned element.</strong></p>
+                <p class="position-demo-para relative">This is a <strong>relatively positioned element</strong> with an offset.</p>
+                <h3>Absolute</h3>
+                <p>The <code>absolute</code> value is similar to <code>relative</code>, but the element's offsets are now calculated not relative to its document flow position, but rather relative to the position of its closest ancestor with the <code>relative</code> position value.</p>
+                <pre class="code-block"><code>.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}</code></pre>
+                <div class="position-demo-parent"> Relatively Positioned Parent
+                    <div class="position-demo-para absolute"> Absolutely Positioned Child</div>
+                </div>
+                <p>Here we can see how we can use our offset values on an absolutely positioned element to get complete control over its position within its parent element.</p>
+                <h3>Fixed</h3>
+                <p>The <code>fixed</code> position value is fairly self explanatory. The element will always appear in the same position in the viewport, even if you scroll around.</p>
+                <pre class="code-block"><code>.relative-element {
+    position: fixed;
+}</code></pre>
+                <iframe src="demos/fixed.html" class="iframe-large" frameborder="0"></iframe>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4" target="_blank">Github Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+
