@@ -39,17 +39,25 @@
                 unmuteButton.textContent = audioNode.muted ? "Unmute" : "Mute";
             })
 
+            // Getting object reference for play button
             const playButton = document.querySelector(".play-button");
+            // When play button is clicked, unpause audio
             playButton.addEventListener("click", () => {
                 audioNode.play()
             })
 
+            // Getting object reference for pause button
             const pauseButton = document.querySelector(".pause-button")
+            // When pause button is clicked, pause audio
             pauseButton.addEventListener("click", () => {
                 audioNode.pause()
             })
 
+            // Getting object reference for toggle button
             const toggleButton = document.querySelector(".toggle-button");
+            // When toggle button is clicked, check if audio is currently paused
+            // If audio is paused, unpause
+            // If audio is playing, pause
             toggleButton.addEventListener("click", () => {
                 audioNode.paused ? audioNode.play() : audioNode.pause();
             })
