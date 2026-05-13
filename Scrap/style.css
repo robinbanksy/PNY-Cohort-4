@@ -8,19 +8,19 @@ body {
     font-family: 'Funnel Display';
 }
 
-.unmute-button {
+.control-button {
     border: none;
     padding: 1rem;
-    width: 7rem;
+    min-width: 7rem;
     font-size: 1rem;
     font-family: 'Funnel Display';
     border-radius: 5px;
     background-color: #d1e3f0;
 }
-.unmute-button:hover {
+.control-button:hover {
     background-color: #bddbee;
 }
-.unmute-button:active {
+.control-button:active {
     background-color: #70b3e3;
     transform: scale(95%);
 }

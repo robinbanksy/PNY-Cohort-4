@@ -15,13 +15,23 @@
     
         <h2>A Custom Unmute Button Using JS</h2>
         <p>The button below has been programmed using some simple JavaScript to mute and unmute our audio element.</p>
-        <button class="unmute-button">Unmute</button>
+        <button class="unmute-button control-button">Unmute</button>
+
+        <button class="play-button control-button">Play</button>
+        <button class="pause-button control-button">Pause</button>
+        <button class="toggle-button control-button">Toggle Play</button>
 
         <!-- JavaScript Code -->
         <script defer>
             // Getting object references for the unmute button and audio element
             const unmuteButton = document.querySelector(".unmute-button");
             const audioNode = document.querySelector(".audio-element");
+
+            const playButton = document.querySelector(".play-button");
+
+            const pauseButton = document.querySelector(".pause-button")
+
+            const toggleButton = document.querySelector(".toggle-button");
 
             // Adding event listener to button
             // When clicked, the event listener with call a function
@@ -33,6 +43,18 @@
                 // If audio is muted, button reads "unmute"
                 // If audio is unmuted, button reads "mute"
                 unmuteButton.textContent = audioNode.muted ? "Unmute" : "Mute";
+            })
+
+            playButton.addEventListener("click", () => {
+                audioNode.play()
+            })
+
+            pauseButton.addEventListener("click", () => {
+                audioNode.pause()
+            })
+
+            toggleButton.addEventListener("click", () => {
+                audioNode.paused ? audioNode.play() : audioNode.pause();
             })
         </script>
     </body>
