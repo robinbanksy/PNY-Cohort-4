@@ -27,12 +27,6 @@
             const unmuteButton = document.querySelector(".unmute-button");
             const audioNode = document.querySelector(".audio-element");
 
-            const playButton = document.querySelector(".play-button");
-
-            const pauseButton = document.querySelector(".pause-button")
-
-            const toggleButton = document.querySelector(".toggle-button");
-
             // Adding event listener to button
             // When clicked, the event listener with call a function
             // Which toggles the "muted" property of the audio element
@@ -45,14 +39,17 @@
                 unmuteButton.textContent = audioNode.muted ? "Unmute" : "Mute";
             })
 
+            const playButton = document.querySelector(".play-button");
             playButton.addEventListener("click", () => {
                 audioNode.play()
             })
 
+            const pauseButton = document.querySelector(".pause-button")
             pauseButton.addEventListener("click", () => {
                 audioNode.pause()
             })
 
+            const toggleButton = document.querySelector(".toggle-button");
             toggleButton.addEventListener("click", () => {
                 audioNode.paused ? audioNode.play() : audioNode.pause();
             })
