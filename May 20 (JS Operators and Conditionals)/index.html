@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="demos.css">
+    <title>May 20</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>PNY Web Dev (May 20)</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>JavaScript Operators</h2>
+                <p>An <strong>operator</strong> is a symbol which indicates that a certain action should be taken, usually applied to one or more <strong>operands</strong>. For example, the mathematical addition operator, <code>+</code>, indicates that the two number operands it is between should be added together.</p>
+                <h3>Binary Operators</h3>
+                <p>Operators are often categorized by the number of operands that they operate on. The addition operator is, for example, a <strong>binary operator</strong>, because it has two operands, the two numbers that are added together. Other examples of binary operators include:</p>
+                <pre class="code-block"><code>x - y       <span class="comment">// Subtraction operator</span>
+x * y       <span class="comment">// Multiplication operator</span>
+x / y       <span class="comment">// Division operator</span>
+x % y       <span class="comment">// Modulus operator; returns the remainder of division. 
+                             //  (e.g. 11 % 2 -> 1)</span></code></pre>
+                <h3>Unary Operators</h3>
+                <p>Operators with only a single operand are called <strong>unary operators</strong>. An example of a unary operator is the logical NOT operator, <code>!</code>. The logical NOT operator takes a <strong>boolean operand</strong> and inverts its value:</p>
+                <pre class="code-block"><code>let bool = true;
+let notBool = !bool;     <span class="comment">// notBool will be false</span></code></pre>
+                <p>Other examples of unary operators inclue the increment <code>++</code> operator and decrement <code>--</code> operator. These allow us to simply increment or decrement a number by 1:</p>
+                <pre class="code-block"><code>let num = 5;
+num++;      <span class="comment">// num is now equal to 6</span>
+num--;      <span class="comment">// num is again equal to 5</span></code></pre>
+                <p>Or the <code>typeof</code> operator, which returns the data type (number, string, or boolean) in the form of a string:</p>
+                <pre class="code-block"><code>console.log(typeof "Hello");      <span class="comment">// Will print "string"</span></code></pre>
+                <h3>Comparison Operators</h3>
+                <p><strong>Comparison Operators</strong> are used to construct <strong>boolean expressions</strong>. An example we've seen is the "greater than" symbol: <code>&gt;</code>, which is used to determine if one value is greater than a second. Other examples of comparison operators include:</p>
+                <pre class="code-block"><code>x - y        <span class="comment">// Subtraction operator</span>
+x >= y       <span class="comment">// Greater than or equal to</span>
+x <= y       <span class="comment">// Less than or equal to</span>
+x === y      <span class="comment">// Strict Equality operator; returns true only if both operands are identical</span>
+x != y       <span class="comment">// Inequality operator; returns true only if the operands are NOT equal</span>  
+</span></code></pre>
+            </section>
+            <section class="content">
+                <h2>Conditionals</h2>
+                <p><strong>Conditionals</strong> are statements that allow us to execute different code depending on the situation. For example, to only make an HTML element visible if a certain button is pressed. The most common way to implement a conditional statement is the <strong>if statement</strong>:</p>
+                <pre class="code-block"><code>if(x >= 10) &lbrace;
+    console.log("x is big");
+&rbrace;</code></pre>
+                <p>Here we can see that an if statement takes a boolean expression, and only executes the code within its braces if that boolean expression is true.</p>
+                <p>We can also add an <strong>else statement</strong> which executes if the if statement's boolean condition is false:</p>
+                <pre class="code-block"><code>if(x >= 10) &lbrace;
+    console.log("x is big");
+&rbrace; else &lbrace;
+    console.log("x is small");
+&rbrace;</code></pre>
+                <p>Here, when <code>x >= 10</code> is true, the if code will execute, but if it is false, the else code will execute instead.</p>
+                <p>More complex branching conditionals can be made with the <strong>else if</strong> construction:</p>
+                <pre class="code-block"><code>if(score >= 90) &lbrace;
+    grade = "A";
+&rbrace; else if(score >= 80) &lbrace;
+    grade = "B";
+&rbrace; else if(score >= 70) &lbrace;
+    grade = "C";
+&rbrace; else if(score >= 60) &lbrace;
+    grade = "D";
+&rbrace; else &lbrace;
+    grade = "F";
+&rbrace;</code></pre>
+            <p>If the first if condition is false, the second one will be checked. If that one is also false, the next one will be checked, and so on. If all conditions are false, the final else code will be executed.</p>
+            <h3>Ternary Operator</h3>
+            <p>The <strong>ternary operator</strong> is a shorthand way to write simple conditionals. It is called the ternary operator because it operates on three operands: the first is a boolean expression, and the other two are statements, the first being executed if the boolean is true, and the second being executed if the boolean is false.</p>
+            <pre class="code-block"><code>passingGrade ? console.log("You passed!") : console.log("You failed!");</code></pre>
+            <p>As seen above the ternary operator consists of a <code>?</code> symbol after the boolean expression, and a color <code>:</code> to separate the two other operands.</p>
+        </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 Umair Almahmood</p>
+            <a href="https://github.com/robinbanksy/PNY-Cohort-4" target="_blank">Github Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+
