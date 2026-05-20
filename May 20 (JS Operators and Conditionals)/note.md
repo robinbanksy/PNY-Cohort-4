@@ -96,7 +96,7 @@ If the first if condition is false, the second one will be checked. If that one 
 The ternary operator is a shorthand way to write simple conditionals. It is called the ternary operator because it operates on three operands: the first is a boolean expression, and the other two are expressions, the first being executed if the boolean is true, and the second being executed if the boolean is false.
 
 ```js
-passingGrade ? console.log("You passed) : console.log("You failed!");
+passingGrade ? console.log("You passed!") : console.log("You failed!");
 ```
 
 As seen above, the ternary operator consists of a `?` symbol after the boolean expression, and a `:` to separate the two other operands.
