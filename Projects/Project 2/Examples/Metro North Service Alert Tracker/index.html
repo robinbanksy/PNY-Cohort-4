@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Metro North Service Alerts</title>
+</head>
+<body>
+    <header>
+        <h1>Metro North Service Alerts</h1>
+    </header>
+    <section class="alert-section">
+        <h2>Active Alerts</h2>
+        <p>Updated as of: <span id="update-time"></span></p>
+        <div class="alert-container">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Umair Almahmood</p>
+        <a href="https://www.mta.info/developers">MTA Developer Resources</a>
+
+    </footer>
+
+    <template id="alert-card-template">
+        <div class="alert-card">
+            <p class="alert-heading"></p>
+            <p class="alert-content"></p>
+        </div>
+    </template>
+
+    <script src="main.js"></script>
+</body>
+</html>
