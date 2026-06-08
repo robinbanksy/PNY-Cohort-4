@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shift Cipher</title>
+</head>
+<body>
+    <header>
+        <h1>Shift Cipher</h1>
+    </header>
+    <aside class="resources section">
+        <h2>More On Cryptography</h2>
+        <ul>
+            <li><a target="_blank" href="https://www.crypto101.io/">Cryptography 101</a></li>
+            <li><a target="_blank" href="https://emn178.github.io/online-tools/sha256.html">SHA256</a></li>
+        </ul>
+    </aside>
+    <main>
+        <div class="cipher section">
+            <input type="number" id="shift">
+            <div class="message">
+                <textarea name="input" id="input" placeholder="Enter text to encrypt"></textarea>
+                <textarea name="output" id="output" placeholder="Encrypted text will appear here"></textarea>
+            </div>
+            </div>
+    </main>
+    <article id="about" class="about section prose">
+        <h2>What's a Shift Cipher?</h2>
+        <p>A shift cipher is a simple encryption technique where each letter in the original message is "shifted" by a certain number of positions in the alphabet. For example, in a cipher with a shift of 3, 'A' would become 'D', 'B' would become 'E', and so on. If we reach the end of the alphabet, we wrap around to the beginning, so 'Z' would become 'C'.</p>
+        <h3>Rot13</h3>
+        <p>Rot13 is a specific type of shift cipher where each letter is shifted by 13 positions. This means that 'A' becomes 'N', 'B' becomes 'O', and so on. Rot13 is special, in that it's its own inverse. This means that if you apply Rot13 to a message twice, you will get back the original message. For example, if you apply Rot13 to "Hello, World!", you would get "Uryyb, Jbeyq!". If you apply Rot13 again to "Uryyb, Jbeyq!", you would get back "Hello, World!". This is because the shift number of the cipher is 13, which is exactly half of 26, the number of letters in the English alphabet.</p>
+        <p>So, in other words, unlike most shift ciphers, where we follow one procedure to encrypt our message, and a different procedure to decrypt it, Rot13 uses the same procedure for both encryption and decryption.</p>
+    </article>
+    <footer></footer>
+
+    <script src="cipher.js"></script>
+</body>
+</html>
