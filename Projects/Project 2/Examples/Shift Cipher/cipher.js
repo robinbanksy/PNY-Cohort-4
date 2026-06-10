@@ -6,7 +6,7 @@ input.addEventListener("input", () => {
     output.value = encrypt(input.value, Number(shift.value))
 })
 
-input.addEventListener("output", () => {
+output.addEventListener("input", () => {
     input.value = decrypt(output.value, shift.value)
 })
 
@@ -41,11 +41,11 @@ function decrypt(str, shift) {
     
     // Uppercase letters (65-90)
     if (code >= 65 && code <= 90) {
-      return String.fromCharCode(((code - 65 - shift) % 26) + 65);
+      return String.fromCharCode(((26 + (code - 65 - shift)) % 26) + 65);
     }
     // Lowercase letters (97-122)
     if (code >= 97 && code <= 122) {
-      return String.fromCharCode(((code - 97 - shift) % 26) + 97);
+      return String.fromCharCode(((26 + (code - 97 - shift)) % 26) + 97);
     }
     // Leave spaces, numbers, and punctuation as they are
     return char; 
