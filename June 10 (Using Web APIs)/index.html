@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>June 10</title>
+</head>
+<body>
+    <header>
+        <h1>Using Web APIs</h1>
+    </header>
+    <section class="prose">
+        <h2>What Are APIs?</h2>
+        <p>An <strong>API</strong>, or <strong>"Application Programming Interface,"</strong> is simply a set of rules for communication with an application. For example, an application may be designed to serve data from a database, and have an API which a programmer can use to ask for specific data. This makes it possible for different applications to communicate with each other.</p>
+        <p>We'll primarily be focused on learning how to use publically accessible APIs on our websites. <strong>Web APIs</strong> are APIs that are accessed via the internet, usually using the <strong>HTTP(S)</strong> protocol, the same protocol used to access websites.</p>
+    </section>
+    <section class="prose">
+        <h2>Using Web APIs</h2>
+        <p>Since web APIs often use HTTP, we can access them by making HTTP requests in the form of a URL. To do this in our JavaScript code, we can use the <strong>Fetch API</strong>, a feature provided by JavaScript.</p>
+        <p>However, there's a complication when using the Fetch API, which is that it is <strong>asynchronous</strong> in nature. This means that it operates outside of the regular flow of our script. This is because making a remote request can take time, which, if synchronous, would tie up our code while we wait for a response. So, in order to use the Fetch API, we'll need to first learn how to write asynchronous code.</p>
+        <h3>Async and Await</h3>
+        <p>When we call an asynchronous function, like fetch, we don't know when it will finish getting a response. To address this, asynchronous functions return a <strong>Promise</strong> of a result. A Promise is a placeholder which can eventually be used to access the actual response value. The <strong>await</strong> keyword tells part of our code that it must wait for a Promise to be resolved. We usually put our asynchronous code inside of a function with the <strong>async</strong> keyword before it</p>
+        <pre class="code-block"><code>async function getData() {
+    const response = await fetch("https://emojihub.yurace.pro/api/random");
+    const data = await response.json();
+
+    document.querySelector(".emoji-display").innerHTML = data.htmlCode[0];
+}</code></pre>
+        <p>Above we have an example of an API call to an emoji API. We use async and await to get data from the API and then display some of that data onto our webpage.</p>
+    </section>
+    <section class="prose">
+        <h2>Demo</h2>
+        <iframe src="api-demo/api.html" frameborder="0"></iframe>
+    </section>
+    <section class="prose">
+        <h2>Resources</h2>
+        <p><a href="https://github.com/cheatsnake/emojihub">Emoji API Source Code</a></p>
+        <p><a href="https://metmuseum.github.io/">Metropolitan Museum API</a></p>
+        <p><a href="https://github.com/public-apis/public-apis">List of Public API</a></p>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+:root {
+    --bg-color: rgb(222, 226, 231);
+
+    --code-block-bg: rgb(52, 53, 54);
+}
+
+@font-face {
+    font-family: 'Funnel Display';
+    src: url(../fonts/Funnel_Display/FunnelDisplay-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Funnel Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: min(85ch, 100%);
+    margin-bottom: 3rem;
+}
+
+.prose > * + * {
+    margin-block-start: 1.5rem;
+}
+
+iframe {
+    border-radius: 5px;
+    border: 2px black solid;
+    background-color: white;
+    min-height: 300px;
+}
+
+.code-block {
+    background-color: var(--code-block-bg);
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px white solid;
+    border-radius: 7px;
+    overflow-x: scroll;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+header {
+    width: min(85ch, 100%);
+    text-align: left;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--code-block-bg);
+}
